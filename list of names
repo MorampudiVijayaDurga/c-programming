@@ -1,0 +1,20 @@
+//list of names
+#include <stdio.h>
+#include <string.h>
+void main() 
+{
+char a[20][20];
+int n;
+printf("please enter the no.of names:");
+scanf("%d",&n);
+for(int i=0;i<n;i++)
+{
+    scanf("%s\n",a[i]);
+}
+printf("\n List of names\n");
+for(int i=0;i<n;i++)
+{
+    printf("%d student name is:%s\n",i+1,a[i]);
+}
+
+}
