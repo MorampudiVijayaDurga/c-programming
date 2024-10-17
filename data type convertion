@@ -1,0 +1,12 @@
+//convertion from string to integer
+#include <stdio.h>
+void main() 
+{
+ char a[3]="123";
+ int rev=0;
+ for(int i=0;i<3;i++)
+ {
+     rev=(rev*10)+(a[i]-'0');
+ }
+ printf("%d",rev);
+}
