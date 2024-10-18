@@ -1,0 +1,21 @@
+//factotial
+#include <stdio.h>
+#include <conio.h>
+int fact(int);
+int fact(int a)
+{
+
+  return a*fact(a-1);
+}
+
+void main()
+{
+    int n;
+    printf("enter a positive integer");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+
+        printf("factorial is:%d",fact(n));
+    }
+}
