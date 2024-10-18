@@ -1,0 +1,52 @@
+//list of menu
+#include <stdio.h>
+#include <conio.h>
+#include<stdbool.h>
+bool prime(int,int);
+int gcd(int,int);
+int gcd(int a,int b)
+{
+    int temp;
+    while(b>0)
+    {
+      temp=a;
+      a=b;
+      b=temp%b;
+
+    }
+    return a;
+}
+bool prime(int a,int b)
+{
+
+    return gcd(a,b)==1;
+}
+void main()
+{
+    int n;
+    printf("enter the numnber");
+    scanf("%d",&n);
+    int a[10];
+    int i,j,k;
+    for(int i=5;i<n;i++)
+    {
+
+        for(int j=4;j<i;j++)
+        {
+                        for(int k=3;k<j;k++)
+            {
+
+                if((i*i)==(j*j)+(k*k))
+                {
+
+                    if(prime(i,j)&&prime(j,k)&&prime(k,i))
+                    {
+
+                        printf("%d %d %d\n",k,j,i);
+                    }
+                }
+            }
+        }
+    }
+}
+
