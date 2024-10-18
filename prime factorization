@@ -1,17 +1,25 @@
-//list of menu
+
+list of menu
 #include <stdio.h>
 #include <conio.h>
-int prime(int);
-int prime(int a)
+void prime(int);
+void prime(int a)
 {
 
-if (a==1);
-return;
-int i=2;
-while(a%i!=0)
-{
-    i++;
+    if (a==1)
+     return;
+    int i=2;
+    while(a%i!=0)
+    {
+        i++;
+    }
+    printf(" %d",i);
+    prime(a/i);
 }
-printf("%d",i);
-prime(a/i);
+void main()
+{
+    int a;
+    printf("enter a positive number:");
+    scanf("%d",&a);
+    prime(a);
 }
