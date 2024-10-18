@@ -1,0 +1,48 @@
+        // searching element to replace
+#include <stdio.h>
+int row,col,i,j;
+int main()
+{
+    printf("Enter  no.of rows :");
+    scanf("%d",&row);
+    printf("Enter no.of columns:");
+    scanf("%d",&col);
+    int arr[row][col];
+    for(i=0;i<row;i++)
+    {
+        printf("Enter the value for rows:%d\n",i+1);
+        for(j=0;j<col;j++)
+        {
+            printf("Enter the value for row %d,column %d :",i+1,j+1);
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("dispaly the table:\n");
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+{
+            printf("%d\t",arr[i][j]);
+        }
+        printf("\n");
+    } 
+    int rowCor,colCor,act;
+    printf("enter the row that you want to correct:");
+    scanf("%d",&rowCor);
+    printf("enter the column correct:");
+    scanf("%d",&colCor);
+    printf("actual value:");
+    scanf("%d",&act);
+    arr[rowCor-1][colCor]=act;
+    printf("The correction table is\n);
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            printf("%d\t",arr[i][j]);
+            
+        }
+        printf("\n");
+    }
+    return 0;
+}
