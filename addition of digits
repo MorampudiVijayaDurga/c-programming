@@ -1,17 +1,18 @@
-//list of menu
+//adittion of digits
 #include <stdio.h>
 #include <conio.h>
 int digits(int);
-int res=0;
 int digits(int n)
 {
 
-
-   res=res+(n%10);
-   n=n/10;
-   return res;
+   int res=0;
+   while(n>0)
+   {
+    res=res+(n%10);
+    n=n/10;
+   }
+    return res;
 }
-
 void main()
 {
     int a[10]={12,22,33,44,55,66,77,88,99,100},sum=0;
@@ -23,3 +24,4 @@ void main()
     printf("sum of digits:%d",sum);
 
 }
+
