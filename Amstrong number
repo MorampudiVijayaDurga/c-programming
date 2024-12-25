@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+
+    int n,sum=0,r;
+    printf("please enter any number:");
+    scanf("%d",&n);
+    int temp=n;
+    while(n>0)
+    {
+        r=n%10;
+        sum=sum+(r*r*r);
+        n=n/10;
+    }
+
+    if(sum==temp)
+    {
+        printf("Given number is Amstrong number");
+    }
+    else
+    {
+
+        printf("Given number is not Amstrong number");
+    }
+    return 0;
+}
