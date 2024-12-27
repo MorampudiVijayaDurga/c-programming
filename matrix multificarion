@@ -1,0 +1,72 @@
+#include <stdio.h>
+void accept(int a[10][10],int r,int c);
+void matrixMul(int a[10][10],int b[10][10],int res[10][10],int r1,int c1,int r2,int c2);
+void display(int a[10][10],int r,int c);
+int main()
+{
+    int a[10][10],b[10][10],res[10][10];
+    int r1,c1,r2,c2;
+    printf("enter the orde of matrix a:");
+    scanf("%d%d",&r1,&c1);
+    printf("enter the orde of matrix b:");
+    scanf("%d%d",&r2,&c2);
+    printf("enter the values into matrix a:");
+    accept(a,r1,c1);
+    printf("enter the values into matrix b:");
+    accept(b,r2,c2);
+    if(c1!=r2)
+       {
+        printf("matrix multiplication not possible");
+        return 0;
+       }
+    matrixMul(a,b,res,r1,c1,r2,c2);
+    printf("matrix a:");
+    display(a,r1,c1);
+    printf("matrix b:");
+    display(b,r2,c2);
+    printf("the resultant matrix:");
+    display(res,r1,c2);
+    return 0;
+}
+void accept(int a[10][10],int r,int c)
+{
+    int i,j;
+    for(i=0;i<r;i++)\
+    {
+
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);        }
+    }
+}
+void matrixMul(int a[10][10], int b[10][10],int res[10][10],int r1,int c1,int r2,int c2)
+{
+    int i,j,k;
+    for(i=0;i<r1;i++)
+    {
+      for(j=0;j<c2;j++)
+        {
+            res[i][j]=0;
+
+            for(k=0;k<c1;k++)
+            {
+                res[i][j]=res[i][j]+a[i][k]*b[k][j];
+            }
+        }
+    }
+}
+void display(int a[10][10],int r,int c)
+{
+    int i,j;
+    for(i=0;i<r;i++)
+    {
+
+        for(j=0;j<c;j++)
+        {
+
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+
+}
