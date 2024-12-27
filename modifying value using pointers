@@ -1,0 +1,21 @@
+#include <stdio.h>
+void modifyVal(int **ptr);
+int main()
+{
+    int x;
+    int *ptr=&x;
+    printf("enter any value:");
+    scanf("%d",&x);
+    printf("\nBefore modification the values is:%d",x);
+    modifyVal(&ptr);
+    printf("After modification the value is:%d",x);
+    return 0;
+}
+
+    void modifyVal(int **ptr)
+    {
+        int temp;
+        printf("enter the value that you want to modify:");
+        scanf("%d",&temp);
+        **ptr=temp;
+    }
