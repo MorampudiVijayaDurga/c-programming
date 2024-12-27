@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int n,i,a[10];
+    int *ptr=&a[0];
+
+    printf("please enter the size of array:");
+    scanf("%d",&n);
+    printf("enter the elements into array:");
+    for(i=0;i<n;i++)
+    {
+       scanf("%d",(ptr+i));
+
+    }
+    for(i=0;i<n;i++)
+    {
+
+        printf("%d ",*(ptr+i));
+    }
+    return 0;
+}
