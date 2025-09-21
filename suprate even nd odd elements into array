@@ -1,0 +1,31 @@
+ //suprate even nd odd elements into array
+#include
+ <stdio.h>
+int main()
+{
+    int size;
+    printf("Please enter the size of an array:");
+    scanf("%d",&size);
+    int arr[size],freq[size];
+    printf("please enter the elements into array:");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("\n even elements are:\n ");
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]%2==0)
+        {
+            printf("%d ",arr[i]);
+        }
+    }
+    printf("\nodd eelements are:\n");
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]%2!=0)
+        {
+            printf("%d ",arr[i]);
+        }
+    }
+}
